@@ -1,0 +1,9 @@
+[package]
+name = "waffle-lir"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+path = "lib.rs"
+
+[dependencies]

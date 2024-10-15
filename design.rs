@@ -32,6 +32,8 @@ struct Decoder {
     fd: (),
 }
 
+// This way multiple decoders can write into a single decoded module.
+// This is done for module resolving later on.
 impl Decoder {
     fn new() -> Self {}
 

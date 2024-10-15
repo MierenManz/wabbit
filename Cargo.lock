@@ -3,5 +3,5 @@
 version = 3
 
 [[package]]
-name = "wabbit"
+name = "waffle-lir"
 version = "0.1.0"
