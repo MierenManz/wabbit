@@ -67,6 +67,7 @@ impl FuncType {
     }
 }
 
+#[derive(Clone, Copy)]
 pub struct Limits {
     min: u32,
     max: Option<u32>,
@@ -91,6 +92,20 @@ pub type MemType = Limits;
 pub struct TableType {
     ref_type: RefType,
     limits: Limits,
+}
+
+impl TableType {
+    pub fn new(ref_type: RefType, limits: Limits) -> Self {
+        Self { ref_type, limits }
+    }
+
+    pub fn ref_type(&self) -> RefType {
+        self.ref_type
+    }
+
+    pub fn limits(&self) -> Limits {
+        self.limits
+    }
 }
 
 pub struct GlobalType {

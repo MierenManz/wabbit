@@ -47,7 +47,7 @@ impl LirModule {
         self.type_section.push(fn_type);
     }
 
-    pub fn add_func(&mut self, type_idx: u32) {
+    pub fn add_func(&mut self, type_idx: TypeIdx) {
         self.fn_section.push(type_idx);
     }
 }
