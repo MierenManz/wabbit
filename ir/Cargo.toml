@@ -1,5 +1,5 @@
 [package]
-name = "waffle-lir"
+name = "waffle-ir"
 version = "0.1.0"
 edition = "2021"
 

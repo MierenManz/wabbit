@@ -1,15 +1,16 @@
-use crate::descriptors::LirCode;
-use crate::descriptors::LirData;
-use crate::descriptors::LirElement;
-use crate::descriptors::LirExport;
-use crate::descriptors::LirGlobal;
-use crate::descriptors::LirImport;
-use crate::descriptors::LirMemory;
-use crate::descriptors::LirTable;
+use super::types::LirCode;
+use super::types::LirData;
+use super::types::LirElement;
+use super::types::LirExport;
+use super::types::LirGlobal;
+use super::types::LirImport;
+use super::types::LirMemory;
+use super::types::LirTable;
+
 use crate::indices::FuncIdx;
 use crate::indices::TypeIdx;
-use crate::types::FuncType;
 
+use crate::types::FuncType;
 pub struct LirModule {
     type_section: Vec<FuncType>,
     // We ignore this for now :)
