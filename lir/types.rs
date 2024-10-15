@@ -30,31 +30,14 @@ impl From<NumType> for ValType {
     }
 }
 
-pub struct Limits {
-    min: u32,
-    max: Option<u32>,
-}
+pub type ResultType = Vec<ValType>;
 
-impl Limits {
-    pub fn new(min: u32, max: Option<u32>) -> Self {
-        Self { min, max }
-    }
-
-    pub fn min(&self) -> u32 {
-        self.min
-    }
-
-    pub fn max(&self) -> Option<u32> {
-        self.max
-    }
-}
-
-pub struct FnType {
-    values: Vec<ValType>,
+pub struct FuncType {
+    values: ResultType,
     param_count: u32,
 }
 
-impl FnType {
+impl FuncType {
     // TODO: Add error type
     pub fn new(params: &[ValType], result: &[ValType]) -> Result<Self, ()> {
         if params.len() > u32::MAX as usize || result.len() > u32::MAX as usize {
@@ -82,4 +65,35 @@ impl FnType {
     pub(crate) fn result(&self) -> &[ValType] {
         &self.values[self.param_count as usize..]
     }
+}
+
+pub struct Limits {
+    min: u32,
+    max: Option<u32>,
+}
+
+impl Limits {
+    pub fn new(min: u32, max: Option<u32>) -> Self {
+        Self { min, max }
+    }
+
+    pub fn min(&self) -> u32 {
+        self.min
+    }
+
+    pub fn max(&self) -> Option<u32> {
+        self.max
+    }
+}
+
+pub type MemType = Limits;
+
+pub struct TableType {
+    ref_type: RefType,
+    limits: Limits,
+}
+
+pub struct GlobalType {
+    val_type: ValType,
+    mutable: bool,
 }
