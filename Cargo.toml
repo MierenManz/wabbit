@@ -1,2 +1,3 @@
 [workspace]
-members = ["ir"]
+members = ["decoder", "ir"]
+resolver = "1"

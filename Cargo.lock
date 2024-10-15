@@ -3,5 +3,12 @@
 version = 3
 
 [[package]]
+name = "waffle-decoder"
+version = "0.1.0"
+dependencies = [
+ "waffle-ir",
+]
+
+[[package]]
 name = "waffle-ir"
 version = "0.1.0"
