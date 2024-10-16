@@ -7,4 +7,5 @@ edition = "2021"
 path = "lib.rs"
 
 [dependencies]
+leb128 = "0.2.5"
 waffle-ir = { path = "../ir" }
