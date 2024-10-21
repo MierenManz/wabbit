@@ -14,29 +14,38 @@ impl<R: Read> Decoder<R> {
     }
 
     fn decode_type_section(&mut self, module: &mut LirModule) -> Result<(), DecodingError> {
-        // for
+        // self.reader.bytes()
         Ok(())
     }
 
     pub fn decode_into(mut self, module: &mut LirModule) -> Result<(), DecodingError> {
 
-        for mut i in 0..13u8 {
+        let mut i = 0;
+        loop {
+            if i >= 13 {
+                break;
+            }
+
             let section_id: u8 = varint_read(&mut self.reader)?
                 .try_into()
                 .map_err(|_| DecodingError::VarintOverflow)?;
-
+    
             // ID is lower than expected. This is wrong
             if section_id <= i && section_id != 0 {
                 return Err(DecodingError::UnexpectedSection(section_id))
             }
-
+    
             match i {
-                1 => {},
+                1 => self.decode_type_section(module)?,
+                // 2 => 
+                // 3 => self.decode_fn_section(module)?,
+                4 => {},
                 _ => {}
             }
-
+    
             i = section_id;
         }
+
         Ok(())
     }
 

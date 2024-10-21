@@ -30,7 +30,7 @@ impl From<NumType> for ValType {
     }
 }
 
-pub type ResultType = Vec<ValType>;
+pub type ResultType = Box<[ValType]>;
 
 pub struct FuncType {
     values: ResultType,
@@ -53,7 +53,7 @@ impl FuncType {
         x.extend_from_slice(result);
 
         Self {
-            values: x,
+            values: x.into_boxed_slice(),
             param_count: params.len() as u32,
         }
     }
@@ -68,7 +68,7 @@ impl FuncType {
 }
 
 #[derive(Clone, Copy)]
-pub struct Limits {
+pub struct Limits { 
     min: u32,
     max: Option<u32>,
 }
