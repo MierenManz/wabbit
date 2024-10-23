@@ -1,15 +1,13 @@
-use crate::indices::FuncIdx;
-use crate::indices::GlobalIdx;
-use crate::indices::MemIdx;
-use crate::indices::TableIdx;
-use crate::indices::TypeIdx;
-use crate::types::GlobalType;
-use crate::types::MemType;
-use crate::types::TableType;
-
-// TODO: Add instruction type
-type Instruction = ();
-type ConstInstruction = ();
+use crate::common::FuncIdx;
+use crate::common::GlobalIdx;
+use crate::common::MemIdx;
+use crate::common::TableIdx;
+use crate::common::TypeIdx;
+use crate::common::GlobalType;
+use crate::common::MemType;
+use crate::common::TableType;
+use crate::common::Instruction;
+use crate::common::ConstInstruction;
 
 pub(crate) type Expr = Vec<Instruction>;
 pub(crate) type ConstExpr = Vec<ConstInstruction>;

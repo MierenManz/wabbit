@@ -1,4 +1,3 @@
-mod decoder;
 pub mod error;
 mod traits;
 

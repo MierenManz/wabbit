@@ -7,10 +7,10 @@ use super::types::LirImport;
 use super::types::LirMemory;
 use super::types::LirTable;
 
-use crate::indices::FuncIdx;
-use crate::indices::TypeIdx;
+use crate::common::FuncIdx;
+use crate::common::TypeIdx;
+use crate::common::FuncType;
 
-use crate::types::FuncType;
 pub struct LirModule {
     type_section: Vec<FuncType>,
     // We ignore this for now :)
