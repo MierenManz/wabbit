@@ -1,15 +1,13 @@
-use super::FuncIdx;
-use super::GlobalIdx;
-use super::GlobalType;
-use super::MemIdx;
-use super::MemType;
-use super::TableIdx;
-use super::TableType;
-use super::TypeIdx;
-
-// TODO: Add instruction type
-type Instruction = ();
-type ConstInstruction = ();
+use crate::common::ConstInstruction;
+use crate::common::FuncIdx;
+use crate::common::GlobalIdx;
+use crate::common::GlobalType;
+use crate::common::Instruction;
+use crate::common::MemIdx;
+use crate::common::MemType;
+use crate::common::TableIdx;
+use crate::common::TableType;
+use crate::common::TypeIdx;
 
 pub(crate) type Expr = Vec<Instruction>;
 pub(crate) type ConstExpr = Vec<ConstInstruction>;

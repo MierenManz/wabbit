@@ -3,9 +3,8 @@ use crate::common::DataMode;
 use crate::common::ElementMode;
 use crate::common::ExportDescriptor;
 use crate::common::Expr;
-use crate::common::ImportDescriptor;
-
 use crate::common::GlobalType;
+use crate::common::ImportDescriptor;
 use crate::common::MemType;
 use crate::common::RefType;
 use crate::common::TableType;
