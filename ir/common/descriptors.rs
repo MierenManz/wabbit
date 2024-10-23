@@ -1,11 +1,11 @@
-use crate::indices::FuncIdx;
-use crate::indices::GlobalIdx;
-use crate::indices::MemIdx;
-use crate::indices::TableIdx;
-use crate::indices::TypeIdx;
-use crate::types::GlobalType;
-use crate::types::MemType;
-use crate::types::TableType;
+use super::FuncIdx;
+use super::GlobalIdx;
+use super::GlobalType;
+use super::MemIdx;
+use super::MemType;
+use super::TableIdx;
+use super::TableType;
+use super::TypeIdx;
 
 // TODO: Add instruction type
 type Instruction = ();

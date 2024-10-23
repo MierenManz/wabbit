@@ -1,15 +1,15 @@
-use crate::descriptors::ConstExpr;
-use crate::descriptors::DataMode;
-use crate::descriptors::ElementMode;
-use crate::descriptors::ExportDescriptor;
-use crate::descriptors::Expr;
-use crate::descriptors::ImportDescriptor;
+use crate::common::ConstExpr;
+use crate::common::DataMode;
+use crate::common::ElementMode;
+use crate::common::ExportDescriptor;
+use crate::common::Expr;
+use crate::common::ImportDescriptor;
 
-use crate::types::GlobalType;
-use crate::types::MemType;
-use crate::types::RefType;
-use crate::types::TableType;
-use crate::types::ValType;
+use crate::common::GlobalType;
+use crate::common::MemType;
+use crate::common::RefType;
+use crate::common::TableType;
+use crate::common::ValType;
 
 pub struct LirImport {
     module: String,
