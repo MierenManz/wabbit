@@ -1,9 +1,0 @@
-pub(crate) type TypeIdx = u32;
-pub(crate) type FuncIdx = u32;
-pub(crate) type TableIdx = u32;
-pub(crate) type MemIdx = u32;
-pub(crate) type GlobalIdx = u32;
-pub(crate) type ElemIdx = u32;
-pub(crate) type DataIdx = u32;
-pub(crate) type LocalIdx = u32;
-pub(crate) type LabelIdx = u32;
